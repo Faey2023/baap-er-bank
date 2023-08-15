@@ -29,37 +29,37 @@
           <!-- deposit div  -->
           <div class="bg-[#E06C9F] p-8 rounded-xl">
             <h3 class="text-3xl">Deposit</h3>
-            <h2 class="text-5xl">$00</h2>
+            <h2 class="text-5xl">$ <span id="depo-box">00</span></h2>
           </div>
           <!-- withdraw div  -->
           <div class="bg-[#F283B6] p-8 rounded-xl">
             <h3 class="text-3xl">Withdraw</h3>
-            <h2 class="text-5xl">$00</h2>
+            <h2 class="text-5xl">$ <span id="withdraw-box">00</span></h2>
           </div>
           <!-- Balance div  -->
           <div class="bg-[#EDBFB7] p-8 rounded-xl">
             <h3 class="text-3xl">Balance</h3>
-            <h2 class="text-5xl">$00</h2>
+            <h2 class="text-5xl">$ <span id="balance-box">00</span></h2>
           </div>
         </div>
       </section>
       <!-- withdraw deposit  -->
       <section class="mt-12">
-        <div
-          class="grid grid-rows-2 gap-4 w-9/12 mx-auto text-neutral-50 lg:grid-cols-2"
-        >
+        <div class="grid grid-rows-2 gap-4 w-9/12 mx-auto lg:grid-cols-2">
           <!-- deposit div  -->
           <div class="bg-[#9d0b28] p-8 rounded-lg">
-            <h3 class="text-3xl mb-4 font-semibold">Please Deposit</h3>
+            <h3 class="text-3xl mb-4 font-semibold text-neutral-50">
+              Please Deposit
+            </h3>
             <input
-              id="depo"
+              id="input-depo"
               class="block w-9/12 mb-2 px-3"
               type="text"
               placeholder="Enter your deposit amount"
             />
             <button
               id="btn-depo"
-              class="bg-[#5a082d] px-8 py-2 font-medium rounded-lg hover:bg-[#E06C9F]"
+              class="bg-[#5a082d] px-8 py-2 font-medium rounded-lg hover:bg-[#E06C9F] text-neutral-50"
             >
               Deposit
             </button>
@@ -68,16 +68,18 @@
           <!-- withdraw div  -->
 
           <div class="bg-[#ff004d] p-8 rounded-lg">
-            <h3 class="text-3xl mb-4 font-semibold">Please Withdraw</h3>
+            <h3 class="text-3xl mb-4 font-semibold text-neutral-50">
+              Please Withdraw
+            </h3>
             <input
-              id="withdraw"
+              id="input-withdraw"
               class="block w-9/12 mb-2 px-3"
               type="text"
-              placeholder="Enter your deposit amount"
+              placeholder="Enter your withdraw amount"
             />
             <button
               id="btn-withdraw"
-              class="bg-[#33030d] px-8 py-2 font-medium rounded-lg hover:bg-[#F283B6]"
+              class="bg-[#33030d] px-8 py-2 font-medium rounded-lg hover:bg-[#F283B6] text-neutral-50"
             >
               Withdraw
             </button>
