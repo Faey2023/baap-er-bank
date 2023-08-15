@@ -9,7 +9,7 @@ document.getElementById("btn-submit").addEventListener("click", function () {
   const passField = document.getElementById("pass");
   const pass = passField.value;
   //step 4- verify email and password
-  if (email === "fahima2023@gmail.com" && pass === "secret") {
+  if (email === "faheema2023@gmail.com" && pass === "secret") {
     window.location.href = "acc.html";
   } else {
     alert("Your not my child!!!");
