@@ -14,9 +14,18 @@ document.getElementById("btn-depo").addEventListener("click", function () {
   const currentDepoAmount =
     parseFloat(previousDepoAmount) + parseFloat(newDepoAmount);
   depoTotal.innerText = currentDepoAmount;
+  //5- balance total
+  const balanceTotal = document.getElementById("balance-box");
+  const balancePreviousTotalString = balanceTotal.innerText;
+  balancePreviousTotal = parseFloat(balancePreviousTotalString);
+  //6 calculate current total
+
+  const balanceCurrentTotal = balancePreviousTotal + parseFloat(newDepoAmount);
+  balanceTotal.innerText = balanceCurrentTotal;
   //   7 clear the deposit field
   depoField.value = "";
 });
+
 // withdraw
 document.getElementById("btn-withdraw").addEventListener("click", function () {
   const withdrawField = document.getElementById("input-withdraw");
@@ -24,5 +33,3 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
   const withdrawTotal = document.getElementById("withdraw-box");
   withdrawTotal.innerText = withdrawAmount;
 });
-//balance total
-const balanceTotal = document.getElementById("balance-box");
