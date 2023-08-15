@@ -16,20 +16,30 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
   const withdrawField = document.getElementById("input-withdraw");
   const withdrawAmountString = withdrawField.value;
   const withdrawAmount = parseFloat(withdrawAmountString);
+  //step 7
+  withdrawField.value = "";
+  if (isNaN(withdrawAmount)) {
+    alert("Please provide a number.");
+    return;
+  }
   // step3
   const withdrawTotal = document.getElementById("withdraw-box");
   const withdrawAmountStringPrevious = withdrawTotal.innerText;
   const withdrawAmountPrevious = parseFloat(withdrawAmountStringPrevious);
-  // step4
-  const currentWithdrawTotal = withdrawAmountPrevious + withdrawAmount;
-  withdrawTotal.innerText = currentWithdrawTotal;
+
   // step5
   const balanceTotal = document.getElementById("balance-box");
   const balancePreviousTotalString = balanceTotal.innerText;
   const balancePreviousTotal = parseFloat(balancePreviousTotalString);
+
+  if (withdrawAmount > balancePreviousTotal) {
+    alert("এত টাকা নাই।");
+    return;
+  }
+  // step4
+  const currentWithdrawTotal = withdrawAmountPrevious + withdrawAmount;
+  withdrawTotal.innerText = currentWithdrawTotal;
   //  step6
   const newBalanceTotal = balancePreviousTotal - withdrawAmount;
   balanceTotal.innerText = newBalanceTotal;
-  //step 7
-  withdrawField.value = "";
 });

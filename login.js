@@ -12,6 +12,6 @@ document.getElementById("btn-submit").addEventListener("click", function () {
   if (email === "faheema2023@gmail.com" && pass === "secret") {
     window.location.href = "acc.html";
   } else {
-    alert("Your not my friend!!!");
+    alert("তুমি কে ভাই!!!");
   }
 });
